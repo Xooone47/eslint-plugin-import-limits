@@ -1,6 +1,6 @@
 /**
  * @fileoverview limit component deep call
- * @author eason
+ * @author Deland
  */
 'use strict';
 

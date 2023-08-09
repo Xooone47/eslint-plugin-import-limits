@@ -22,7 +22,7 @@ yarn add -D eslint-plugin-import-limits
 
 Add `import-limits` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
-```json
+```js
 {
     "plugins": [
         "import-limits"
@@ -32,11 +32,11 @@ Add `import-limits` to the plugins section of your `.eslintrc` configuration fil
 
 Then configure the rules you want to use under the rules section.
 
-```json
+```js
 {
     "rules": {
         "import-limits/independent-modules": [2, ['src/views']],
-        "import-limits/level-declaration": [2, ['src/types','src/utils', ['src/components', 'src/hooks'], 'src/views']],
+        "import-limits/level-declaration": [2, ['src/types', 'src/utils', ['src/components', 'src/hooks'], 'src/views']],
     }
 }
 ```
@@ -56,7 +56,7 @@ Specify the giving modules to be independent modules, which disallow the sub-mod
 │         └── qux
 ```
 
-```json
+```js
 {
     "import-limits/independent-modules": [2, ['src/views']]
 }
@@ -68,7 +68,7 @@ If you want to share some abilities between src/views/foo and src/views/bar, you
 
 ### import-limits/level-declaration
 
-```json
+```js
 {
     "import-limits/level-declaration": [2, ['src/types','src/utils', ['src/components', 'src/hooks'], 'src/views']],
 }
@@ -95,7 +95,7 @@ The modules in the same level are allowed to import from each other (like the `s
 
 Provide alias setting to plugin , which to be the same as [webpack alias](https://webpack.js.org/configuration/resolve/#resolvealias).
 
-```json
+```js
 {
     settings: {
         'import-limits': {
