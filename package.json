@@ -1,0 +1,46 @@
+{
+  "name": "eslint-plugin-import-limits",
+  "version": "0.0.1",
+  "description": "limit the import statements",
+  "keywords": [
+    "eslint",
+    "import",
+    "limit",
+    "boundary",
+    "dependency",
+    "restriction"
+  ],
+  "author": {
+    "name": "Deland",
+    "email": "insidethe47s@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xooone47/eslint-plugin-import-limits"
+  },
+  "homepage": "https://github.com/Xooone47/eslint-plugin-import-limits",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint lib --ext .js,.ts",
+    "test": "mocha tests --recursive",
+    "prepublishOnly": "yarn lint --fix"
+  },
+  "dependencies": {
+    "lodash.get": "^4.4.2",
+    "lodash.startswith": "^4.2.1",
+    "requireindex": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-plugin-eslint-plugin": "^4.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "mocha": "^9.1.3"
+  },
+  "engines": {
+    "node": "12.x || 14.x || >= 16"
+  },
+  "peerDependencies": {
+    "eslint": ">=6"
+  },
+  "license": "ISC"
+}
